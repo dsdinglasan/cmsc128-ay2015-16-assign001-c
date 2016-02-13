@@ -9,8 +9,8 @@
 #include<stdio.h>
 #include<string.h>
 #include "Dinglasan_Danika.h"//contains the function menu and numToWords
-//#include "wordsToNum.h"
-//#include "wordsToCurrency.h"
+#include "wordsToNum.h"
+#include "wordsToCurrency.h"
 #include "numberDelimited.h"
 
 
@@ -32,10 +32,10 @@ main(){
 					numToWords();//calls the function numToWords
 					break;
 			case 2: printf("\t==========WORDS TO NUMBER==========\n");
-					//wordsToNum();//calls the function wordsToNum()
+					wordsToNum();//calls the function wordsToNum()
 					break;
 			case 3: printf("\t==========WORDS TO CURRENCY==========\n");
-					//wordsToCurrency();//calls the fucntion wordsToCurrency
+					wordsToCurrency();//calls the fucntion wordsToCurrency
 					break;
 			case 4: printf("\t==========NUMBER DELIMITED==========\n");
 					numberDelimited();//calls the function numberDelimeted
