@@ -42,7 +42,7 @@ void numToWords(){
 	char *number_tens[10] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 	char *number_tys[10] = {"", "", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 	
-	if(num>1000000){//more than millions place
+	if(num>1000000||num<0){//more than millions place
 		printf("INVALID INPUT!\n");
 	}
 	else{
