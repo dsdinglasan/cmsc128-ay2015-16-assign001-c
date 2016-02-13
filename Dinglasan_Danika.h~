@@ -5,14 +5,13 @@
 	Program Description: This program let the user cnovert a number to words, words to number, words to number with the specified currency and number with delimeters
 	Date: February 14, 2016
 **/
+
 /**libraries**/
 #include<stdio.h>
 #include<string.h>
 
 void menu();
 void numToWords();
-void wordsToNum();
-
 /**
 	function for printing the menu
 **/
@@ -30,10 +29,11 @@ void menu(){
 }
 /**
 	function for converting number to words
+	Accepts a whole number from zero (0) to 1 million (1000000; without commas for example: 1,000,000) and prints on screen the number in word form
 **/
 void numToWords(){
 	long num;
-	printf("\n\tEnter a number from 0 to 1000000: ");
+	printf("\n\tEnter a number from 0 to 1000000(Eg. 900009): ");
 	scanf("%ld", &num);
 	
 	//needed variables
@@ -42,7 +42,7 @@ void numToWords(){
 	char *number_tens[10] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 	char *number_tys[10] = {"", "", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 	
-	if(num>9999999){//more than millions place
+	if(num>1000000){//more than millions place
 		printf("INVALID INPUT!\n");
 	}
 	else{
@@ -138,16 +138,4 @@ void numToWords(){
 			printf("\n\n");
 		}
 	}
-}
-
-void wordsToNum(){
-	char number[100];
-	
-	printf("\n\tEnter the word/s: ");
-	getchar();
-	fgets(number, 100, stdin);
-	printf("%s", number);
-	
-	
-	
 }

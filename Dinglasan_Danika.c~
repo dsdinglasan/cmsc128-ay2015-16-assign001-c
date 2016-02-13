@@ -8,7 +8,11 @@
 
 #include<stdio.h>
 #include<string.h>
-#include "Dinglasan_Danika.h"
+#include "Dinglasan_Danika.h"//contains the function menu and numToWords
+//#include "wordsToNum.h"
+//#include "wordsToCurrency.h"
+#include "numberDelimited.h"
+
 
 main(){
 	
@@ -25,15 +29,18 @@ main(){
 			case 0: printf("\t==========GOODBYE==========\n");
 					break;
 			case 1: printf("\t==========NUMBER TO WORDS==========\n");
-					numToWords();
+					numToWords();//calls the function numToWords
 					break;
 			case 2: printf("\t==========WORDS TO NUMBER==========\n");
-					wordsToNum();
+					//wordsToNum();//calls the function wordsToNum()
 					break;
 			case 3: printf("\t==========WORDS TO CURRENCY==========\n");
+					//wordsToCurrency();//calls the fucntion wordsToCurrency
 					break;
 			case 4: printf("\t==========NUMBER DELIMITED==========\n");
+					numberDelimited();//calls the function numberDelimeted
 					break;
+					
 			default: printf("\tWRONG INPUT\n");
 		}
 	}
